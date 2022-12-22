@@ -2,15 +2,16 @@ import 'package:filter_word/filter_word.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
+  test('Sensor toAsterisk', () {
+    final tes = SensorWord();
 
-    setUp(() {
-      // Additional setup goes here.
-    });
+    tes.setWords([
+      "asa",
+      "aka"
+    ]);
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
-    });
+    final a = tes.sensorWord("akxsa");
+
+    expect(a, true);
   });
 }
